@@ -1,38 +1,55 @@
-== 月下人狼 ==
+Table of Contents
+Moon wolf
+Version
+Requirements
+Usage
+Development
+Notes on front-end scripts
+Using Docker
+Docker image
+Docker-compose
+Jobs
+Basic
+Peach chestnut special
+Peach chest period limit
+Scorpion wolf
+Ultimate の人狼
+Moonlight
+Options
+Moon wolf
 Are you a werewolf?
 
-[http://jinrou.uhyohyo.net/ 月下人狼サーバー]稼働中!
-== version ==
+Under the moon, people are in a wolf !
+
+Version
 1.14.20
 
-== requirements ==
-* Redis
-* MongoDB >= 3.2
-
-== usage ==
-# Copy the source code
-## `git clone git://github.com/uhyo/jinrou.git`
-# Install dependencies
-## `cd jinrou`
-## `npm install`
-# Configure
-## `cp -r config.default config`
-## edit `config/app.coffee`
-# Build front-end scripts
-## `cd front`
-## `npm install`
-## `npm run production-build`
-## `cd ..`
-# Run databases
-## run MongoDB
-## run redis
-# Run the application serverj
-## SS_ENV=production SS_PACK=1 node app.js
-
-== development ==
+Requirements
+Redis
+MongoDB >= 3.2
+Usage
+Copy the source code
+`git clone git://github.com/uhyo/jinrou.git`
+Install dependencies
+`cd jinrou`
+`npm install`
+Configure
+`cp -r config.default config`
+Edit `config/app.coffee`
+Build front-end scripts
+`cd front`
+`npm install`
+`npm run production-build`
+`cd ..`
+Run databases
+Run MongoDB
+Run redis
+Run the application serverj
+SS_ENV=production SS_PACK=1 node app.js
+Development
 To run in development mode, just run `node app.js`.
 
-=== notes on front-end scripts ===
+Notes on front-end scripts
 Built assets will be placed at `client/static/front-assets`. Also, intermediate files are placed at `front/dist-esm`.
 
 Building procedures are cpu- and memory- expensive. If you do not want to build on your server, you can build locally and copy the results to the server.
@@ -41,69 +58,65 @@ For development, use `npm run watch` in the `front/` directory to keey updating 
 
 In production mode, contents of `client/static/front-assets/` can be served with `Cache-Control: immutable`. This will increace the effect of caches.
 
-== using Docker ==
+Using Docker
 Optionally, one can use Docker to run the jinrou service.
 
 The `Dockerfile` file and `docker` directory are only for this purpose.
 
-=== docker image ===
+Docker image
 To build the docker image for jinrou, run `docker build .` in the project directory. `Dockerfile` defines the image.
 
-=== docker-compose ===
-To run jinrou in an isolated environment using docker-compose, enther `docker` directory and run `docker-compose up --build`. This starts the jinrou docker image along with mongodb and redis Docker containers. The `docker/config.docker` directory contains a config file for running jinrou in this environment.
+Docker-compose
+To run jinrou in an isolated environment using docker-compose, enther `docker` directory and run `docker-compose up --build`. This starts the jinrou docker image along with mongodb and redis Docker containers. The `docker/config.docker ` directory contains a config file for running jinrou in this environment.
 
-== jobs ==
-全80種くらい?
+Jobs
+All 80 kinds?
 
-=== 基本 ===
-* 村人
-* 占い師
-* 霊能者
-* 狂人
-* 狩人
-* 共有者
-* 埋毒者
-* 人狼
-* 妖狐
-* 埋毒者
-* 大狼
-* 子狐
-=== 桃栗特殊 ===
-* こうもり
-* 貴族
-* 奴隷
-* 魔術師
-* スパイ
-* 人狼占い
-=== 桃栗期間限定 ===
-* 逃走者
-* 商人
-* 女王感戦者
-* 狂人狼
-* 嘘つき
-* スパイⅡ
-* コピー
-=== うそつき人狼 ===
-* 独裁者
-* 予言者のママ
-* 罠師
-* 狼少年
-* 王様
-=== 究極の人狼 ===
+Basic
+Villager
+Occupy division
+Enthusiast
+mad Men
+Hunter
+Co-owner
+Poisoner
+werewolf
+Fox
+Poisoner
+Big wolf
+Child fox
+Peach chestnut special
+こうもり
+noble
+slave
+magician
+スパイ
+Human wolf
+Peach chest period limit
+Escaper
+businessman
+Queen sensation
+Madman wolf
+嘘つき
+スパイII
+コピー
+Scorpion wolf
+dictator
+言ののママ
+Teacher
+Wolf teenager
+Wang Wei
+Ultimate の人狼
 いろいろ
-=== 月夜の人狼 ===
-* 看板娘
-* 慎重な狼
 
+Moonlight
+Kanban
+Cautious wolf
 などなど
-
-=== options ===
-* 決定者
-* 権力者
-* 死神の手帳
-* 闇鍋
-* 一部闇鍋
-* 量子人狼
-
-
-
+Options
+decision maker
+Powerful person
+Death god
+Dark pot
+a dark pot
+Quantum wolf
